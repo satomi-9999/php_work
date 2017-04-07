@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss>
+    <channel>
+        <item>
+            <title>テスト01</title>
+            <link>URL01</link>
+        </item>
+        <item>
+            <title>テスト02</title>
+            <link>URL02</link>
+        </item>
+        <item>
+            <title>テスト03</title>
+            <link>URL03</link>
+        </item>
+    </channel>
+</rss>

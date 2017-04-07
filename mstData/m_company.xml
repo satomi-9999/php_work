@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss>
+    <m_company>
+        <company_id>2017000001</company_id>
+        <company_nm>JR東日本</company_nm>
+    </m_company>
+    <m_company>
+        <company_id>2017000002</company_id>
+        <company_nm>東京メトロ</company_nm>
+    </m_company>
+    <m_company>
+        <company_id>2017000003</company_id>
+        <company_nm>東急電鉄</company_nm>
+    </m_company>
+</rss>

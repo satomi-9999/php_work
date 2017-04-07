@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss>
+    <m_fee>
+        <company_id>2017000001</company_id>
+        <fee_km>100</fee_km>
+    </m_fee>
+    <m_fee>
+        <company_id>2017000002</company_id>
+        <fee_km>115</fee_km>
+    </m_fee>
+    <m_fee>
+        <company_id>2017000003</company_id>
+        <fee_km>89</fee_km>
+    </m_fee>
+</rss>

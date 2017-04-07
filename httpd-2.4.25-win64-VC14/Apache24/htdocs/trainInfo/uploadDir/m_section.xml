@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss>
+    <m_section>
+	    <section_id>200000100</section_id>
+	    <section_point_station_id>1011111101</section_point_station_id>
+	    <section_next_station_id>1011111102</section_next_station_id>
+	    <distance_km>19</distance_km>
+    </m_section>
+    <m_section>
+	    <section_id>200000101</section_id>
+	    <section_point_station_id>1011111102</section_point_station_id>
+	    <section_next_station_id>1011111103</section_next_station_id>
+	    <distance_km>12</distance_km>
+    </m_section>
+    <m_section>
+	    <section_id>200000102</section_id>
+	    <section_point_station_id>1011111103</section_point_station_id>
+	    <section_next_station_id>1011111104</section_next_station_id>
+	    <distance_km>3</distance_km>
+    </m_section>
+</rss>

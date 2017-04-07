@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss>
+    <m_station>
+        <station_id>1011111101</station_id>
+        <station_nm>大倉山</station_nm>
+        <station_address>大倉山３丁目</station_address>
+    </m_station>
+    <m_station>
+        <station_id>1011111102</station_id>
+        <station_nm>菊名</station_nm>
+        <station_address>菊名３丁目</station_address>
+    </m_station>
+    <m_station>
+        <station_id>1011111103</station_id>
+        <station_nm>綱島</station_nm>
+        <station_address>綱島３丁目</station_address>
+    </m_station>
+    <m_station>
+        <station_id>1011111104</station_id>
+        <station_nm>武蔵小杉</station_nm>
+        <station_address>どっかの３丁目</station_address>
+    </m_station>
+</rss>

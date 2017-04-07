@@ -1,0 +1,36 @@
+<?php
+ header("Content-Type: text/html; charset=UTF-8");
+?>
+<html>
+<head>
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+	
+	<title>わたしの駅員さん</title>
+	
+<body>
+	<div id="header">
+		<h2>わたしの駅員さん</h2>
+	</div>
+	<div class ="left" width="100">
+		<A href="/trainInfo/fileUpload.html" title="ファイルアップロードはこちら" >ファイルアップロードはこちら</A>
+	</div>
+	<div class="contents2">
+		<ul id="gnavi">
+			<li class="gnavi01"><a href="csspage.html">ホーム</a></li>
+			<li class="gnavi02"><a href="#">メニュー1</p></a></li>
+			<li class="gnavi03"><a href="#">メニュー2</a></li>
+		</ul>
+		<form action="/trainInfo/php/upload.php" method="post" enctype="multipart/form-data">
+			<table align = "center">
+				<tr><td>出発：<input type="text" name="start" value="" /></td></tr>
+				<tr><td>到着：<input type="text" name="end" /></td></tr>
+				<tr><td>時刻：<input type="text" name="yyyymmdd" /></td></tr>
+				<tr><td align = "center"><input type="submit" name="sendbutton" value="検索" /></td><td></td></tr>
+			</table>
+		</div>
+		</form>
+	</body>
+</html>

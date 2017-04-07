@@ -1,0 +1,14 @@
+<?php
+ header("Content-Type: text/html; charset=UTF-8");
+?>
+<html>
+	<title>trainInfo</title>
+	<body>
+		
+			<p>ファイルアップロードフォーム</p>
+			<form action="/trainInfo/php/upload.php" method="post" enctype="multipart/form-data">
+					<p><input type="file" name="inputFile" /></p>
+					<p><input type="submit" name="sendbutton" value="submit" /></p>
+			</form>
+	</body>
+</html>

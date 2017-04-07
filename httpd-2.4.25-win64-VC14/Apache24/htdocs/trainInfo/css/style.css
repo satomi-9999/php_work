@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+/*------------------------
+リセットスタイル
+--------------------------*/
+*{
+	font-style:normal;
+	font-weight:normal;
+	font-size:100%;
+}
+
+html,body,div,h1,h2,h3,h4,h5,h6,p,ol,ul,li,dl,dt,dd,table,th,td,form,blockquote,pre,address,fieldset{/*マージンとパッディングをリセット*/
+	margin: 0px;
+	padding: 0px;
+}
+
+img {/*画像*/
+	border: 0px;
+	vertical-align: top;	
+}
+
+ul li { /*リストスタイルなし*/
+	list-style:none;
+}
+
+/*------------------------
+共通レイアウト(#はid、.はclass)
+--------------------------*/
+.contents2 table{
+	width: 300px;
+	align: center;
+}
+
+.left {
+	align:left;
+}
+
+.right {
+	align:center;
+}
+
+#contents {
+	color:#333333;
+}
+#contents a {
+	color:#333333;
+}
+#contents a:hover {
+	text-decoration:none;
+}
+
+/*----- header -----*/
+#header {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*gnavi*/
+#gnavi {
+	height: 30px;
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom:15px;
+	overflow: hidden;
+}
+#gnavi li {
+	float: left;
+}
+#gnavi li a {
+	width: 150px;
+	height:30px;
+	display: block;
+	text-indent: -9999px;
+#	overflow: hidden;
+}
+#gnavi .gnavi01 a {
+	background-image: url(../images/bn_1.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#gnavi .gnavi02 a {
+	background-image: url(../images/bn_2.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+#gnavi .gnavi03 a {
+	background-image: url(../images/bn_3.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+/*------------------------
+下位階層共通
+--------------------------*/
+
+#contentsWrap {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+/*leftarea*/
+#leftarea {
+	float: left;
+	width: 150px;
+}
+#leftarea li {
+	margin-bottom:10px;
+}
+
+/*contents*/
+#contents {
+	float: right;
+	width:430px;
+}
+#contents h2 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #F60;
+	background-image: url(../images/arw.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin-bottom: 15px;
+	padding-left: 10px;
+}
+#contents p {
+	font-size: 14px;
+	color: #666;
+	padding-left: 10px;
+	line-height: 160%;
+}

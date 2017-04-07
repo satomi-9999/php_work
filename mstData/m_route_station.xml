@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss>
+    <m_route_station>
+        <route_id>100000100</route_id>
+        <station_id>1011111101</station_id>
+    </m_route_station>
+    <m_route_station>
+        <route_id>100000100</route_id>
+        <station_id>1011111102</station_id>
+    </m_route_station>
+    <m_route_station>
+        <route_id>100000100</route_id>
+        <station_id>1011111103</station_id>
+    </m_route_station>
+    <m_route_station>
+        <route_id>100000100</route_id>
+        <station_id>1011111104</station_id>
+    </m_route_station>
+</rss>
