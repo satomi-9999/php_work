@@ -1,0 +1,126 @@
+set path=%path%;C:\workOtani\php-7.0.17-Win32-VC14-x64
+set path=%path%;C:\Program Files\MySQL\MySQL Server 5.7\bin
+
+
+◆phpインストール(7.0)
+ダウンロード、解凍
+★php実行確認（-vなど)※コマンドラインツール使うのでpathも設定してね
+VCランタイムの追加(※足りなければ）
+php.iniファイルの作成（いったんは作成のみでいける）
+
+◆apacheインストール(2.4)
+・ダウンロード、解凍
+・インストールフォルダに合わせた設定変更
+・起動確認（必要なら、サービス登録）
+・PHP-apache連携の設定
+　①Apache経由でPHPを利用するために必要となるモジュール(phpX_module)の追加
+　②拡張子(.php)の登録を行い、ファイルの関連付けをする（addTypeの設定）※紐付がうまくいってないと、ファイルGETして終わりになっちゃう
+　③php.iniファイルの格納先設定（PHPIniDirの設定）
+　④サービス登録（httpd -k install）
+・起動、アクセス確認
+　http://localhost:80/
+
+◆MYSQL
+・ダウンロード、インストール
+・rootUser(root/Satominn1110)
+・接続の確認
+・mysql -u root -p sys
+・DB作成
+　CREATE DATABASE PHP_TEST
+・ユーザ作成
+ 　CREATE USER 'your_name'@'localhost' IDENTIFIED BY 'your_password';
+ 　※CREATE USER satomi@localhost IDENTIFIED BY 'satominn';
+ 　権限付与
+ 　GRANT ALL PRIVILEGES ON PHP_TEST.* TO satomi@localhost;
+
+
+◆Gitの設定
+http://qiita.com/daichi87gi/items/f9dac6cd8acc3ad4330d
+
+・アカウント作成（ID：satomi-9999、メアド：cal.satominn@gmail.com）
+・リモートリポジトリ作成（phpTest）
+　※リモートリポジトリのアドレス：https://github.com/satomi-9999/phpTest.git
+・クライアント設定（CUI）
+　①ダウンロード
+  ②user.name と user.email を設定(github作成したユーザのIDとメアド）
+　◇ローカルリポジトリの作成（C:\workOtani\PHPTraining）
+　　1)GIT管理対象にする（git init）
+    　C:\workOtani\PHPTraining>git init
+    　　Initialized empty Git repository in C:/workOtani/PHPTraining/.git/
+    
+  ◇ファイル取得、編集、コミット
+  ①リモートリポジトリからclone（チェックアウト）
+  　git clone https://github.com/ユーザー名/リモートリポジトリ名
+  　※今だとgit clone https://github.com/satomi-9999/phpTest.git
+  ②新規ファイルの追加（対象ディレクトリ配下にtest.txtを作成してから）
+  　git add test.txt
+  ③コミット（forステージング)
+  　git commit -m 'first commit'
+  ④リモートへの送信（コミット）
+  　git push -u origin master
+
+  ※その他※
+  編集中のファイルをgit status で確認できる
+  diffもとれる
+
+1.クローン/clone：リポジトリの内容をローカルPCにコピーする
+2.コミット/commit：ファイルを更新した情報を、Gitに記憶させる
+3.プッシュ/push：ローカルで変更した内容を、元のリポジトリに反映する
+  
+
+◆apacheとphpの連携正常確認
+
+
+NW環境では以下のように構築
+
+C:\workOtani\httpd-2.4.25-win64-VC14\Apache24
+
+├─bin
+│  └─iconv
+│    httpd.exe
+│
+├─cgi-bin
+│      printenv.pl
+├─conf
+│  ├─extra
+│  └─original
+│      └─extra
+│      httpd.conf
+├─error
+│  └─include
+├─htdocs(★ドキュメントルート)
+│      index.html
+├─icons
+│  └─small
+├─include
+├─lib
+├─logs
+├─manual
+│  ├─developer
+│  ├─faq
+│  ├─howto
+│  ├─images
+│  ├─misc
+│  ├─mod
+│  ├─platform
+│  ├─programs
+│  ├─rewrite
+│  ├─ssl
+│  ├─style
+│  │  ├─css
+│  │  ├─latex
+│  │  └─scripts
+│  └─vhosts
+└─modules
+
+★アプリケーション構成
+├─htdocs
+│  └─trainInfo
+│        index.html
+
+※ドキュメントルート配下のディレクトリのうち、後悔したくないものは以下の設定を行う
+<Directory　　（指定したいディレクトリ）>
+　　「指定したいディレクトリ」に及ぼしたい設定内容
+　　Allow from xxx.xxx.xxx.xxx or ALL/Deny from xxx.xxx.xxx.xxx or ALL(上位ディレクトリを公開禁止にしても、サブディレクトリは公開可能
+</Directory> xxx.xxx.xxx.xxx or ALL
+※また、ファイル単位で公開、非公開設定もできる。その場合は<File>ディレクティブをしよう
